@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="jakarta.activation-1.2.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../jakarta.activation-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jakarta.xml.bind-api-2.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../istack-commons-runtime-3.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../jaxb-runtime-2.3.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../txw2-2.3.3.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/src" />
+    </SOURCES>
+  </library>
+</component>
