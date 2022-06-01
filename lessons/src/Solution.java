@@ -1,31 +1,24 @@
 package com.javarush.task.task33.task3308;
 
-import java.io.*;
-import java.net.URL;
-import java.net.URLConnection;
+
 
 /*
-Получение информации по API
+Давно забытый Array
 */
 
+import org.junit.platform.commons.util.StringUtils;
+
 public class Solution {
-
-    public static int[] take(int[] arr, int n) {
-        int[] result = new int[n];
-        for (int i = 0; i < n; i++) {
-            result[i] = arr[i];
+        public static String mouthSize(String animal){
+            if (animal.equalsIgnoreCase("alligator")) return "small";
+            return "wide";
         }
-        return result;
-    }
 
 
 
 
 
 
-
-
-    public static void main(String[] args) throws IOException {
-
+    public static void main(String[] args) {
     }
 }
