@@ -1,22 +1,44 @@
 package com.javarush.task.task33.task3308;
 
 
-
-/*
-Давно забытый Array
-*/
-
-import org.junit.platform.commons.util.StringUtils;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class Solution {
-    public static String mouthSize(String animal) {
-        if (animal.equalsIgnoreCase("alligator")) return "small";
-        return "wide";
-
-
+    public static void main(String[] args) throws Exception {
+        Solution solution = new Solution();
+        solution.sendPost(new URL("http://requestb.in/1cse9qt1"), "name=zapp&mood=good&locale=&id=777");
     }
 
+    public void sendPost(URL url, String urlParameters) throws Exception {
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-    public static void main(String[] args) {
+        connection.setRequestMethod("POST");
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+        connection.setDoOutput(true);
+
+
+        int responseCode = connection.getResponseCode();
+        System.out.println("Response Code: " + responseCode);
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        String responseLine;
+        StringBuilder response = new StringBuilder();
+
+        while ((responseLine = bufferedReader.readLine()) != null) {
+            response.append(responseLine);
+        }
+        bufferedReader.close();
+
+        System.out.println("Response: " + response.toString());
     }
 }
+
